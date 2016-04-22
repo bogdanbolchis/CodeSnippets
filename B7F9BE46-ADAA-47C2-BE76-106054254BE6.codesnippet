@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_errorReturningMethod</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (BOOL)&lt;#doSomethingWith#&gt;:(id)object error:(NSError * __autoreleasing *)error
+{
+    BOOL success = &lt;#statements#&gt;;
+    if (!success &amp;&amp; error) {
+		  *error = [NSError errorWithDomain:&lt;#domain#&gt; code:&lt;#code#&gt; userInfo:&lt;#userInfo#&gt;];
+    }
+    return success;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B7F9BE46-ADAA-47C2-BE76-106054254BE6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSError</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

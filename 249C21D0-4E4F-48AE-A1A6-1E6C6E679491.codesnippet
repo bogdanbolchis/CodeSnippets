@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_presentationController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class PresentationController: UIPresentationController {
+	lazy var backgroundView: UIView = {
+		var bgView = UIView()
+		bgView.backgroundColor = UIColor.blackColor()
+		bgView.alpha = 0.0
+		return bgView
+    }()
+
+	override func presentationTransitionWillBegin() {
+
+	}
+
+	override func presentationTransitionDidEnd(completed: Bool) {
+
+	}
+
+	override func dismissalTransitionWillBegin() {
+
+	}
+
+	override func dismissalTransitionDidEnd(completed: Bool) {
+
+	}
+
+	override func frameOfPresentedViewInContainerView() -&gt; CGRect {
+
+	}
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>249C21D0-4E4F-48AE-A1A6-1E6C6E679491</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Presentation Controller</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

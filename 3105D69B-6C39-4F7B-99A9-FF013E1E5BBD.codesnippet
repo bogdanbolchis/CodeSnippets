@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_startStopObservingNotifications</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)startObservingNotifications {
+    [[NSNotificationCenter defaultCenter] addObserverForName:&lt;#name#&gt; object:&lt;#object#&gt; queue:#&lt;#queue#&gt; usingBlock:^(NSNotification *note) {
+        &lt;#block#&gt;
+	}];
+}
+
+- (void)stopObservingNotifications {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3105D69B-6C39-4F7B-99A9-FF013E1E5BBD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Start/Stop Observing Notifications</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

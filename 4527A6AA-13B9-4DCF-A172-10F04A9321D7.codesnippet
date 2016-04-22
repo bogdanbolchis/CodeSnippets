@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let size = label.text!.boundingRectWithSize(CGSizeMake(CGRectGetWidth(footerView.frame), 10000), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: label.font], context: nil)
+    
+footerView.frame = CGRectMake(0, 0, size.width, size.height)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4527A6AA-13B9-4DCF-A172-10F04A9321D7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Resize view according to subview (label) size</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

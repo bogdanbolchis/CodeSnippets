@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_NS_OPTION</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct Options : RawOptionSetType, BooleanType {
+    private let value: UInt = 0
+    init(nilLiteral: ()) {}
+    init(rawValue value: UInt) { self.value = value }
+    var boolValue: Bool { return value != 0 }
+    var rawValue: UInt { return value }
+    static var allZeros: Options { return self(rawValue: 0) }
+
+    static var None: Options         { return self(rawValue: 0b0000) }
+    static var Option: Options     { return self(rawValue: 0b0001) }
+    // ...
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22CB4FB1-DEDE-4B47-BB3A-BA3B410EFB18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift NS_OPTIONS</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

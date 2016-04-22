@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_startObservingKeyboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var keyboardObserver: AnyObject?
+
+func startObservingKeyboardNotifications() {
+    if keyboardObserver != nil {
+        return
+    }
+
+    keyboardObserver = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: nil, usingBlock: { (note: NSNotification!) -&gt; Void in
+        if let userInfo = note.userInfo {
+            let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue
+            let keybFrameInContainerView = self.containerView.convertRect(frameValue.CGRectValue(), fromView: self.containerView.window)
+            &lt;#code#&gt;
+        }
+    })
+}
+
+func stopObservingKeyboardNotifications() {
+    if let obs: AnyObject = keyboardObserver {
+        NSNotificationCenter.defaultCenter().removeObserver(obs)
+        reducePresentedViewOriginYBy(deltaY: -keyboardOverlapHeight)
+        keyboardObserver = nil
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E2B232C1-AF1C-4162-8AF4-6FE9D2F53899</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Observe Keyboard Notifications</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

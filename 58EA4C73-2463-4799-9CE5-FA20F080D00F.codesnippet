@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>foundationVersionNumber</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if (floor(NSFoundationVersionNumber) &lt;= NSFoundationVersionNumber_iOS_6_1) {
+   // Load resources for iOS 6.1 or earlier
+} else {
+   // Load resources for iOS 7 or later
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>58EA4C73-2463-4799-9CE5-FA20F080D00F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>OS Version number</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSFoundationVersionNumber</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

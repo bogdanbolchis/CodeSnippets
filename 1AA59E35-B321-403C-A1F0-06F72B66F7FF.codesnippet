@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// Steps:
+/// 1. Reload (refresh) any existing cells
+/// 2. Delete extra cells if the new list items are fewer than before the update
+/// 3. Insert new cells if the new list items are more than before the update
+func deleteReloadAndInsertCells() {
+    let newListItemsCount = listItems.count
+    let existingRowsCount = tableView.numberOfRowsInSection(0)
+    var numberOfRowsToReload = 0
+    var numberOfRowsToDelete = 0
+
+    // 1. Reload as many cells as list items, if new list items are as many (or fewer) as cells
+    // 2. Delete extra cells if needed
+    if newListItemsCount &lt;= existingRowsCount {
+        numberOfRowsToReload = newListItemsCount
+        numberOfRowsToDelete = existingRowsCount - numberOfRowsToReload
+    } else {
+        numberOfRowsToReload = existingRowsCount
+    }
+
+    // iOS Docs: "Deletion and reloading operations within an animation block specify which rows and sections in the original table should be removed or reloaded"
+
+    // Reload from row 0 up to the number of cells to be reloaded
+    var indexPathsToReload: [NSIndexPath] = []
+    for var row = 0; row &lt; numberOfRowsToReload; ++row {
+        indexPathsToReload.append(NSIndexPath(forRow: row, inSection: 0))
+    }
+
+    // Delete starting after the last cell to be reloaded
+    var indexPathsToDelete: [NSIndexPath] = []
+    for var row = numberOfRowsToReload; row &lt; numberOfRowsToReload + numberOfRowsToDelete; ++row {
+        indexPathsToDelete.append(NSIndexPath(forRow: row, inSection: 0))
+    }
+
+    // iOS Docs: "Insertions specify which rows and sections should be added to the resulting table" - "resulting table" means AFTER deletions
+
+    // Insert rows taking into consideration the state of the table after deletions.
+    let cellsCountAfterDeletions = existingRowsCount - indexPathsToDelete.count
+    var numberOfCellsToInsert = newListItemsCount - cellsCountAfterDeletions
+    var indexPathsToInsert: [NSIndexPath] = []
+    for var row = cellsCountAfterDeletions; row &lt; newListItemsCount; ++row {
+        indexPathsToInsert.append(NSIndexPath(forRow: row, inSection: 0))
+    }
+
+    tableView.beginUpdates()
+    tableView.reloadRowsAtIndexPaths(indexPathsToReload, withRowAnimation: .None)
+    tableView.deleteRowsAtIndexPaths(indexPathsToDelete, withRowAnimation: .None)
+    tableView.insertRowsAtIndexPaths(indexPathsToInsert, withRowAnimation: .None)
+    tableView.endUpdates()
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1AA59E35-B321-403C-A1F0-06F72B66F7FF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Reloads, deletes, inserts</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Update Table View</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>_stateStruct</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct &lt;#name#&gt;State : RawOptionSetType {
+    init(_ value: UInt)
+    static var Normal: &lt;#name#&gt; { get }
+    static var Closed: &lt;#name#&gt; { get }
+    static var InConflict: &lt;#name#&gt; { get }
+    static var SavingError: &lt;#name#&gt; { get }
+    static var EditingDisabled: &lt;#name#&gt; { get }
+}
+
+// http://nshipster.com/rawoptionsettype/</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>81CC8F91-ACD9-49C1-AB97-B93DEE1A9C9C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>State struct</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
